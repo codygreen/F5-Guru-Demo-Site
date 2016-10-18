@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  .container
+    if (typeof(user) !== 'undefined')
+      .page-header
+        .row
+          .col-lg-8.col-md-7.col-sm-6
+            h1.text-capitalize #{user}'s Tasks
+
+
+      ul.nav.nav-pills
+        li: a( href="/") Home
+          span.badge 5
+        li: a( href="#" ) Profile
+          span.badge 1
+        li.active: a( href='/headers') Headers
+          span.badge= headersSize
+
+      ul.list-group
+        each val, index in headers
+          li.list-group-item
+            span.badge= val
+            = index
+
+    else
+      .page-header
+        .row
+          .col-lg-8.col-md-7.col-sm-6
+            h1.text-danger Error
+            div.alert.alert-dismissible.alert-danger
+              button.close &times;
+              strong Oh snap!
+              p You have to login to use this application
