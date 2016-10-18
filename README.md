@@ -17,3 +17,5 @@ The web application is looking for X-User.  If you do not suppy this header you'
 
 ![alt tag](https://github.com/codygreen/F5-Guru-Demo-Site/blob/master/public/images/demo_no_session.png)
 
+## Headers
+You can view the request headers by clicking on the Headers tab
