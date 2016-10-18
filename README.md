@@ -1,5 +1,5 @@
 # F5-Guru-Demo-Site
-Demo site used on [F5 Guru](http://f5guru.com) site
+Demo site used on [F5 Guru](http://f5guru.com) 
 ![alt tag](https://github.com/codygreen/F5-Guru-Demo-Site/blob/master/public/images/demo.png)
 
 ## Install
