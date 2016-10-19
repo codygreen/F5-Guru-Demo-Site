@@ -25,7 +25,18 @@ nav.navbar.navbar-default( role="navigation" )
             li: a( href="/" ) Home
             li: a( href="#" ) Help
 
-block content
+if (typeof(user) !== 'undefined')
+  block content
+else 
+  .container
+    .page-header
+      .row
+        .col-lg-8.col-md-7.col-sm-6
+          h1.text-danger Error
+          div.alert.alert-dismissible.alert-danger
+            button.close &times;
+            strong Oh snap!
+            p You have to login to use this application
 
 footer
   div.row

@@ -2,60 +2,51 @@ extends layout
 
 block content
   .container
-    if (typeof(user) !== 'undefined')
-      .page-header
-        .row
-          .col-lg-8.col-md-7.col-sm-6
-            h1.text-capitalize #{user}'s Tasks
+    .page-header
+      .row
+        .col-lg-8.col-md-7.col-sm-6
+          h1.text-capitalize #{user}'s Tasks
 
-      h3 Overall Task Status
-      div.progress
-        div.progress-bar.progress-bar-info(style="width: 20%")
-          p 20%
-        div.progress-bar.progress-bar-success(style="width: 40%")
-          p 40%
-        div.progress-bar.progress-bar-warning(style="width: 20%")
-          p 20%
-        div.progress-bar.progress-bar-danger(style="width: 20%")
-          p 20%
+    h3 Overall Task Status
+    div.progress
+      div.progress-bar.progress-bar-info(style="width: 20%")
+        p 20%
+      div.progress-bar.progress-bar-success(style="width: 40%")
+        p 40%
+      div.progress-bar.progress-bar-warning(style="width: 20%")
+        p 20%
+      div.progress-bar.progress-bar-danger(style="width: 20%")
+        p 20%
 
-      h3 Tasks
-      ul.nav.nav-pills
-        li.active: a( href="/") Home
-          span.badge 5
-        li: a( href="#" ) Profile
-          span.badge 1
-        li: a( href='/headers') Headers
-          span.badge= headersSize
+    h3 Tasks
+    ul.nav.nav-pills
+      li.active: a( href="/") Home
+        span.badge 5
+      li: a( href="#" ) Profile
+        span.badge 1
+      li: a( href='/headers') Headers
+        span.badge= headersSize
 
-      ul.list-group
-        li.list-group-item.list-group-item-info
-          span.badge 1 hr
-          h5.list-group-item-heading Migrate headers.jade to headers.pug
-          p.small.list-group-item-text To address the renaming of the Jade project to Pug please rename the headrs.jade file to headers.pug
-        li.list-group-item.list-group-item-success
-          span.badge 2 hrs
-          h5.list-group-item-heading Add a new Express route
-          p.small.list-group-item-text Add a new Express route for the upcoming chat feature.
-        li.list-group-item.list-group-item-success
-          span.badge 3 hrs
-          h5.list-group-item-heading Create AWS CloudFormation Template
-          p.small.list-group-item-text Create a new AWS template so developers can start testing product in AWS. 
-        li.list-group-item.list-group-item-warning
-          span.badge 6 hrs
-          h5.list-group-item-heading Deploy Web Application Firewall in Azure
-          p.small.list-group-item-text To address vulnerability findings on our Azure deployment please deploy the F5 Web Application Firewall ASAP.
-        li.list-group-item.list-group-item-danger
-          span.badge 23 hrs
-          h5.list-group-item-heading Resolve SQL Injection Vulnerability
-          p.small.list-group-item-text Update the chat application to address the potential SQL injection vulnerability.  Refer to DAST report for details. 
-    else
-      .page-header
-        .row
-          .col-lg-8.col-md-7.col-sm-6
-            h1.text-danger Error
-            div.alert.alert-dismissible.alert-danger
-              button.close &times;
-              strong Oh snap!
-              p You have to login to use this application
+    ul.list-group
+      li.list-group-item.list-group-item-info
+        span.badge 1 hr
+        h5.list-group-item-heading Migrate headers.jade to headers.pug
+        p.small.list-group-item-text To address the renaming of the Jade project to Pug please rename the headrs.jade file to headers.pug
+      li.list-group-item.list-group-item-success
+        span.badge 2 hrs
+        h5.list-group-item-heading Add a new Express route
+        p.small.list-group-item-text Add a new Express route for the upcoming chat feature.
+      li.list-group-item.list-group-item-success
+        span.badge 3 hrs
+        h5.list-group-item-heading Create AWS CloudFormation Template
+        p.small.list-group-item-text Create a new AWS template so developers can start testing product in AWS. 
+      li.list-group-item.list-group-item-warning
+        span.badge 6 hrs
+        h5.list-group-item-heading Deploy Web Application Firewall in Azure
+        p.small.list-group-item-text To address vulnerability findings on our Azure deployment please deploy the F5 Web Application Firewall ASAP.
+      li.list-group-item.list-group-item-danger
+        span.badge 23 hrs
+        h5.list-group-item-heading Resolve SQL Injection Vulnerability
+        p.small.list-group-item-text Update the chat application to address the potential SQL injection vulnerability.  Refer to DAST report for details. 
+ 
 
